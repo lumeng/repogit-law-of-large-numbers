@@ -34,9 +34,10 @@ library(magrittr)
 ## Strong Law of Large Numbers (SLLN)
 
 
-Let $\{X_i\}$ be a sequence of I.I.D. random variables with binomial distribution with mean $\mathbb{E}\left(X_i\right) = 0$:
+Let $\{X_i\}$ be a sequence of I.I.D. random variables with Bernoulli 
+distribution with mean $\mathbb{E}\left(X_i\right) = 0$:
 
-$$X_i \sim B(N=1, p=0.5) - 0.5, \quad i = 1, 2, \cdots, n.$$
+$$X_i \sim B(p=0.5) - 0.5, \quad i = 1, 2, \cdots, n.$$
 
 
 The average of each sample is an estimator of $\mathbb{E}\left(X_i\right)$:
@@ -44,7 +45,7 @@ The average of each sample is an estimator of $\mathbb{E}\left(X_i\right)$:
 $$\hat{X}_k = \frac{S_k}{k} = \frac{1}{k} \sum_{i=1}^k X_i, \quad k=1,2, \cdots, n.$$
 
 According to the SLLN, the estimator $\hat{X}_k$ has almost sure convergence to 
-$\mathbb{E}\left(X_i\right) = N p - 0.5 = 1 \times 0.5 - 0.5 = 0$:
+$\mathbb{E}\left(X_i\right) = p - 0.5 = 0$:
 
 $$\mathbb{P}\left[\lim_{k \longrightarrow \infty} \left(\hat{X}_k = 0\right)\right] = 1$$
 
